@@ -1,0 +1,11 @@
+opam-version: "1"
+maintainer: "felix.ruess@gmail.com"
+build: [
+  [make]
+  [make "install" "COMPAT_SYMLINK_CREATE=no"]
+]
+remove: [
+  ["ocamlfind" "remove" "ivy"]
+  ["ocamlfind" "remove" "glibivy"]
+]
+depends: ["ocamlfind"]
